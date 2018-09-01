@@ -74,6 +74,18 @@ public class Graph {
 
     /**
      * Floyd
+     * 任意两点的最短路径就是找出两点srcVertex,destVertex之间所有可能路径中的最小的那条路径
+     * 找所有可能路径则考虑遍历以所有点为中间连接点
+     * 以第一个点A为中间点时 srcVertex->desVertex的最短路径为
+     *  min{srcVertex->destVertex,srcVertex->A->destVertex}
+     * 以第二个点B为中间点时srcVertex->B的最短路径为
+     *  min{srcVertex->B,srcVertex->A->B}
+     * 以第三个点C为中间点时 srcVertex->C的最短路径为
+     *  min{srcVertex->C,srcVertex->A->C,srcVertex->A->B->C}
+     * ......
+     *
+     * 以第n个点为中间点时 srcVertex->destVertex的最短路径就选出了所有可能路径中最小的那条
+     *
      */
     public void allPairShortestPath() {
         for (Vertex middleVertex : vertexList) {
@@ -171,7 +183,7 @@ public class Graph {
 
         graph.initVertexVisitPath();
         graph.allPairShortestPath();
-        for (Vertex vertex:graph.getVertexList()){
+        for (Vertex vertex : graph.getVertexList()){
             System.out.println(vertex);
             vertex.getVertexVisitPathList().stream().forEach(System.out::println);
             System.out.println("-------------");
