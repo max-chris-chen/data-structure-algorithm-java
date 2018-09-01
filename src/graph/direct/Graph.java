@@ -76,12 +76,15 @@ public class Graph {
      * Floyd
      * 任意两点的最短路径就是找出两点srcVertex,destVertex之间所有可能路径中的最小的那条路径
      * 找所有可能路径则考虑遍历以所有点为中间连接点
-     * 以第一个点A为中间点时 srcVertex->desVertex的最短路径为
+     * 以第一个点A为中间点时 srcVertex->desVertex记录的最短路径为
      *  min{srcVertex->destVertex,srcVertex->A->destVertex}
-     * 以第二个点B为中间点时srcVertex->B的最短路径为
-     *  min{srcVertex->B,srcVertex->A->B}
+     * 以第二个点B为中间点时srcVertex->B的短路径为
+     *  min{srcVertex->B,srcVertex->A->B（srcVertex通过A到B 比srcVertex直接到B路径短 以A为中间点时已得出）}
+     * B到destVertex的路径为
+     *  min{B->destVertex,B->A-destVertex}
+     * 这时srcVertex到destVertex的路径就是可能是通过了A B得到的最短路径
      * 以第三个点C为中间点时 srcVertex->C的最短路径为
-     *  min{srcVertex->C,srcVertex->A->C,srcVertex->A->B->C}
+     *  min{srcVertex->C,srcVertex->A->C,srcVertex->A->B->C（srcVertex通过B到C比直接到C路径短 而到达B点时通过A点比较短通过上两个点做为中间点得出）}
      * ......
      *
      * 以第n个点为中间点时 srcVertex->destVertex的最短路径就选出了所有可能路径中最小的那条
