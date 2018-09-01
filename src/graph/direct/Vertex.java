@@ -1,5 +1,6 @@
 package graph.direct;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -12,7 +13,7 @@ public class Vertex {
     private List<Edge> visitEdges=new LinkedList<>();
     private boolean visted;
     private int totalWeight=0;
-
+    private List<VertexVisitPath> vertexVisitPathList=new ArrayList<>();
 
     public Vertex(String name) {
         this.name = name;
@@ -58,6 +59,13 @@ public class Vertex {
         this.totalWeight = totalWeight;
     }
 
+    public List<VertexVisitPath> getVertexVisitPathList() {
+        return vertexVisitPathList;
+    }
+
+    public void setVertexVisitPathList(List<VertexVisitPath> vertexVisitPathList) {
+        this.vertexVisitPathList = vertexVisitPathList;
+    }
 
     @Override
     public String toString() {
