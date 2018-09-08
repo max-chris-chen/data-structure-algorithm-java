@@ -1,4 +1,4 @@
-package graph.weight;
+package datastructure.graph.weight;
 
 import java.util.LinkedList;
 import java.util.List;

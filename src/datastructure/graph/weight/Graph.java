@@ -1,9 +1,8 @@
-package graph.weight;
+package datastructure.graph.weight;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.PriorityQueue;
-import java.util.stream.Collectors;
 
 /**
  * Created by Max Chen on 2018/8/18.

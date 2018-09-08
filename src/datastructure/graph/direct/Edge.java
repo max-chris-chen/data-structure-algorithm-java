@@ -1,4 +1,4 @@
-package graph.weight;
+package datastructure.graph.direct;
 
 /**
  * Created by Max Chen on 2018/8/18.
@@ -57,5 +57,14 @@ public class Edge {
         result = 31 * result + (destVertex != null ? destVertex.hashCode() : 0);
         result = 31 * result + weight;
         return result;
+    }
+
+    @Override
+    public String toString() {
+        return "Edge{" +
+                "srcVertex=" + srcVertex +
+                ", destVertex=" + destVertex +
+                ", weight=" + weight +
+                '}';
     }
 }

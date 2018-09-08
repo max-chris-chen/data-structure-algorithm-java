@@ -1,4 +1,4 @@
-package graph.nodirect;
+package datastructure.graph.nodirect;
 
 import java.util.LinkedList;
 
@@ -10,7 +10,13 @@ public class Vertex {
     private LinkedList<Vertex> adjacencyVertexList=new LinkedList<>();
     private boolean visted;
 
+    public Vertex(String name) {
+        this.name = name;
+    }
 
+    public Vertex(){
+
+    }
     public void addAdjanceyVertex(Vertex vertex){
         adjacencyVertexList.add(vertex);
     }

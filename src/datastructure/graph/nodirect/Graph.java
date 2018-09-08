@@ -1,4 +1,4 @@
-package graph.nodirect;
+package datastructure.graph.nodirect;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -134,7 +134,7 @@ public class Graph {
         graph.getVertexList().add(vertexh);
         graph.getVertexList().add(vertexi);
 
-        //graph.deepFirstSearch(graph.getVertexList().get(0));
+        //datastructure.graph.deepFirstSearch(datastructure.graph.getVertexList().get(0));
 
         graph.breadthFirthSearch(graph.getVertexList().get(0));
     }
