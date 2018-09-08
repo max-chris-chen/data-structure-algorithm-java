@@ -1,4 +1,4 @@
-package graph.direct;
+package datastructure.graph.direct;
 
 import java.util.LinkedList;
 import java.util.List;

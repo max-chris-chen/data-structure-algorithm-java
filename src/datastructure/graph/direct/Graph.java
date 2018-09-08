@@ -1,9 +1,8 @@
-package graph.direct;
+package datastructure.graph.direct;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * Created by Max Chen on 2018/8/18.
@@ -177,8 +176,8 @@ public class Graph {
         graph.addAdjacencyVertex(d, c, 20);
         graph.addAdjacencyVertex(d, e, 70);
         graph.addAdjacencyVertex(c, e, 40);
-//        graph.shortestPath();
-//        for (Vertex vertex : graph.getVertexList()) {
+//        datastructure.graph.shortestPath();
+//        for (Vertex vertex : datastructure.graph.getVertexList()) {
 //            System.out.println(vertex);
 //            System.out.println(vertex.getVisitEdges());
 //            System.out.println("-------------");
