@@ -58,4 +58,13 @@ public class Edge {
         result = 31 * result + weight;
         return result;
     }
+
+    @Override
+    public String toString() {
+        return "Edge{" +
+                "srcVertex=" + srcVertex +
+                ", destVertex=" + destVertex +
+                ", weight=" + weight +
+                '}';
+    }
 }
