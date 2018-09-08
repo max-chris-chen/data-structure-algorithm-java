@@ -8,7 +8,7 @@ import java.util.PriorityQueue;
  * Created by Max Chen on 2018/8/18.
  */
 public class Graph {
-    List<Vertex> vertexList = new ArrayList<>();
+    private List<Vertex> vertexList = new ArrayList<>();
 
     public void addVertex(Vertex vertex) {
         vertexList.add(vertex);
@@ -69,6 +69,14 @@ public class Graph {
 
     private void removeEdge(PriorityQueue<Edge> priorityQueue,Edge edge){
         priorityQueue.remove(edge);
+    }
+
+    public List<Vertex> getVertexList() {
+        return vertexList;
+    }
+
+    public void setVertexList(List<Vertex> vertexList) {
+        this.vertexList = vertexList;
     }
 
     public static void main(String[] args) {
